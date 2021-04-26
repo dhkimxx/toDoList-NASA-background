@@ -14,7 +14,6 @@ function paintWallpaper(){
 /apod?api_key=${API_KEY_NASA}`).then(function(response){
     return response.json();
 }).then(function(json){
-    json.url = "https://www.youtube.com/watch?v=RoR7wEEvIuo";
     const img_check = json.url.indexOf("youtube");
     if(img_check){
         image.src = `./images/${genRandom() + 1}.jpg`;
