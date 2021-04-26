@@ -15,7 +15,7 @@ function paintWallpaper(){
     return response.json();
 }).then(function(json){
     const img_check = json.url.indexOf("youtube");
-    if(img_check){
+    if(img_check === 1){
         image.src = `./images/${genRandom() + 1}.jpg`;
     }
     else{
