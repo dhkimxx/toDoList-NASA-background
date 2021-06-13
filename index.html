@@ -8,7 +8,8 @@
 </head>
 
 <body>
-  <div class="js-weather"></div>
+  <span class="js-imageSource"></span>
+  <span class="js-weather"></span>
 	<div class="js-clock">
 		<h1>00:00</h1>
 	</div>
@@ -19,8 +20,16 @@
   <form class="js-toDoForm">
     <input type="text" placeholder="Write a to do here!"> 
   </form>
-  <ul class="js-toDoList">
-  </ul>
+  <table class="js-toDoTable">
+    <tr>
+        <th>Pending</th>
+        <th>Finished</th>
+    </tr>
+    <tr>
+        <td><ul class="js-toDoPending"></ul></td>
+        <td><ul class="js-toDoFinished"></ul></td>
+    </tr>
+</table>
   <!-- <button class="js-reset"></button> -->
   <script src="clock.js"></script>
   <script src="greeting.js"></script>

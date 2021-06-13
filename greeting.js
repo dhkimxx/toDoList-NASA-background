@@ -36,7 +36,20 @@ function loadName(){
     paintGreeting(currentUser);
   }
 }
+function inputEnter(){
+  input.classList.add("fadeInBox");
+  input.classList.remove("fadeOutBox");
+}
+
+function inputOut(){
+  input.classList.add("fadeOutBox");
+  input.classList.remove("fadeInBox");
+}
+
 function init(){
   loadName();
+  input.addEventListener("mouseenter", inputEnter );
+  input.addEventListener("mouseleave", inputOut);
+
 }
 init();

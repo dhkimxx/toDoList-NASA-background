@@ -7,59 +7,75 @@ body{
   }
 
   input{
-    color: #ffffff;
-    border: none;
+    color: #a4b0be;
+    border: hidden;
     text-align: center; 
     background-color: transparent; 
     text-decoration: underline;
-    width: 40%;
+    width: 25%;
+    
   }:focus{
     outline: none;
   }::placeholder{
-    color: #ffffff;
+    color: #a4b0be;
   }
 
-  
+  .fadeInBox{
+    padding: 3px;
+    border: 2px solid #a4b0be;
+    border-radius: 10px;
+    transition: 0.30s ease-out;
+    transform: scale( 1.1 )
+    
+  }
+  .fadeOutBox{
+    padding: 3px;
+    border: 2px solid #a4b0be;
+    border-radius: 10px;
+    transition: 0.30s ease-out;
+  }
+
   .js-weather{
     text-align: right;
+    margin-left: 50%;
   }
 
   .js-clock{
     margin-top: 10%;
+   
   }
 
-  .js-toDoList{
-    list-style-position: inside;
-    margin-left: -30px;
+  .js-toDoTable{
+    margin: auto;
+    width: 90%;
+    table-layout: fixed;
   }
-
   .btn {
     cursor: pointer;
     border: none;
     outline: none;  
     background-color: transparent; 
+    padding: 0;
+    width: 5%;
+    transform: scale( 0.7 )
   }
+
   .clicked{
     color: #7f8c8d;
   }
-  
-  .form, 
+  .form{
+    display: none;
+  }
+ 
   .greetings{
     display: none;
-    text-align: center; 
   }
   
   .showing{
     display: block;
   }
 
-  /* .resetBtn{
-    cursor: pointer;
-    border: none;
-    outline: none;  
-    background-color: transparent; 
-    
-  } */
+
   .bgImage{
     position:absolute;
     top: 0;
@@ -68,7 +84,12 @@ body{
     height: 100%;
     z-index: -2;
   }
-
+  .js-imageSource{
+    font-size: 10px;
+    text-align: left;
+    margin-left: 0px;
+    
+  }
   
   @keyframes fadeIn{
     from{
@@ -76,6 +97,14 @@ body{
     }
     to{
       opacity: 1;
+    }
+  }
+  @keyframes fadeOut{
+    from{
+      opacity: 1;
+    }
+    to{
+      opacity: 0;
     }
   }
 
